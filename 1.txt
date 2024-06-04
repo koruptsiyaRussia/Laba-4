@@ -1,0 +1,12 @@
+max_ratio = 0
+number = 0
+
+for i in range(100, 1000):
+    digit_sum = sum(int(digit) for digit in str(i))
+    if digit_sum != 0:
+        ratio = i / digit_sum
+        if ratio > max_ratio:
+            max_ratio = ratio
+            number = i
+
+print(f"Наибольшее значение отношения трехзначного числа к сумме его цифр: {max_ratio}, число: {number}")
